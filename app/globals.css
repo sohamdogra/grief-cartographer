@@ -1,0 +1,94 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --ink: #08091a;
+  --deep: #0d0f26;
+  --mid: #151730;
+  --surface: #1c1f3d;
+  --amber: #e8a84c;
+  --glow: rgba(232, 168, 76, 0.35);
+  --soft: rgba(232, 168, 76, 0.09);
+  --dim: rgba(232, 168, 76, 0.55);
+  --star: #f0e4c8;
+  --text: #c8b98a;
+  --muted-color: rgba(200, 185, 138, 0.4);
+  --faint: rgba(200, 185, 138, 0.18);
+  --green: #7ecfa0;
+  --danger: #c06060;
+
+  --background: #08091a;
+  --foreground: #c8b98a;
+  --card: #0d0f26;
+  --card-foreground: #c8b98a;
+  --popover: #0d0f26;
+  --popover-foreground: #c8b98a;
+  --primary: #e8a84c;
+  --primary-foreground: #08091a;
+  --secondary: #151730;
+  --secondary-foreground: #c8b98a;
+  --muted: #151730;
+  --muted-foreground: rgba(200, 185, 138, 0.4);
+  --accent: #151730;
+  --accent-foreground: #c8b98a;
+  --destructive: #c06060;
+  --destructive-foreground: #fff;
+  --border: rgba(232, 168, 76, 0.16);
+  --input: rgba(232, 168, 76, 0.16);
+  --ring: #e8a84c;
+  --radius: 3px;
+}
+
+@theme inline {
+  --font-sans: var(--font-crimson), Georgia, serif;
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-mono: monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ink: var(--ink);
+  --color-deep: var(--deep);
+  --color-mid: var(--mid);
+  --color-surface: var(--surface);
+  --color-amber: var(--amber);
+  --color-glow: var(--glow);
+  --color-soft: var(--soft);
+  --color-dim: var(--dim);
+  --color-star: var(--star);
+  --color-text: var(--text);
+  --color-muted-color: var(--muted-color);
+  --color-faint: var(--faint);
+  --color-green: var(--green);
+  --color-danger: var(--danger);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
